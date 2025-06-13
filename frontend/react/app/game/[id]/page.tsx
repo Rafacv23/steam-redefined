@@ -1,3 +1,4 @@
+import GameCard from "@/components/game-card"
 import { Heart, ShoppingCart } from "lucide-react"
 import { Metadata } from "next"
 
@@ -25,7 +26,7 @@ export default async function GamePage({
   // TODO call the api to fetch the game data and make a loading.ts page inside this route
 
   return (
-    <main className="flex flex-col min-h-screen items-center rounded-3xl pb-20 sm:py-10 bg-background">
+    <main className="flex flex-col min-h-screen items-center rounded-3xl pb-20 sm:py-10 bg-gradient-to-b from-[#19181a] to-[#1b2b3e]">
       <div className="grid grid-cols-2 py-20 gap-8 max-w-4xl mx-auto">
         <div>
           <div className="flex justify-between items-start">
@@ -62,7 +63,7 @@ export default async function GamePage({
               </span>
             </div>
           </div>
-          <button className="bg-primary p-4 rounded-full w-full place-content-center flex items-center gap-2">
+          <button className="bg-primary font-bold hover:bg-primary/70 text-foreground transition-colors cursor-pointer p-4 rounded-full w-full place-content-center flex items-center gap-2">
             Add to cart <ShoppingCart size={18} />
           </button>
         </div>
@@ -71,6 +72,14 @@ export default async function GamePage({
             className="rounded-3xl h-full"
             src="https://www.mobygames.com/images/covers/l/435360-super-mario-odyssey-nintendo-switch-front-cover.jpg"
           />
+        </div>
+      </div>
+      <div>
+        <h4 className="mb-2 text-xl font-semibold">Related Games</h4>
+        <div className="flex flex-wrap gap-4 max-w-4xl mx-auto items-center">
+          <GameCard />
+          <GameCard />
+          <GameCard />
         </div>
       </div>
     </main>
