@@ -8,9 +8,28 @@
     "eslint-visitor-keys": "^4.2.1",
     "prettier": "^3.5.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend:dev": "pnpm --filter backend dev",
+    "backend:start": "pnpm --filter backend start",
+    "backend:build": "pnpm --filter backend build",
+    "react:dev": "pnpm --filter react dev",
+    "react:build": "pnpm --filter react build",
+    "react:start": "pnpm --filter react start",
+    "angular:dev": "pnpm --filter angular start",
+    "angular:build": "pnpm --filter angular build",
+    "angular:serve-ssr": "pnpm --filter angular serve:ssr:angular",
+    "vue:dev": "pnpm --filter nuxt-app dev",
+    "vue:build": "pnpm --filter nuxt-app build",
+    "vue:preview": "pnpm --filter nuxt-app preview",
+    "dev:all": "concurrently \"pnpm backend:dev\" \"pnpm react:dev\" \"pnpm angular:dev\" \"pnpm vue:dev\"",
+    "dev:backend": "pnpm backend:dev",
+    "dev:react": "pnpm react:dev",
+    "dev:angular": "pnpm angular:dev",
+    "dev:vue": "pnpm vue:dev"
   },
   "keywords": [],
   "author": "",
