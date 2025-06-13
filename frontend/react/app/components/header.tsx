@@ -21,7 +21,7 @@ export default function Header() {
             className="bg-header p-4 rounded-3xl"
           />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 pr-4">
           <Link href="/cart" className="bg-header rounded-full p-4">
             <Heart size={18} />
           </Link>

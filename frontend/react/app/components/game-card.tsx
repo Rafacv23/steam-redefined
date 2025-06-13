@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function GameCard() {
   return (
     <Link href={`/game/1`}>
-      <article className="relative w-[300px] h-[400px] rounded-3xl overflow-hidden shadow-xl group">
+      <article className="relative w-[280px] h-[400px] rounded-3xl overflow-hidden shadow-xl group">
         {/* Background image */}
         <img
           src="https://www.mobygames.com/images/covers/l/435360-super-mario-odyssey-nintendo-switch-front-cover.jpg"

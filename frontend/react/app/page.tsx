@@ -2,9 +2,9 @@ import GameCard from "@/components/game-card"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div className="flex flex-wrap gap-4 justify-center">
+    <div className="flex flex-col min-h-screen pb-20 sm:py-20">
+      <main className="flex flex-col items-center sm:items-start">
+        <div className="gap-8  justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <GameCard />
           <GameCard />
           <GameCard />
