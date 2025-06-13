@@ -3,7 +3,7 @@ import { ArrowDownToLine, Heart, ShoppingCart, User } from "lucide-react"
 
 export default function Header() {
   return (
-    <header className="bg-header max-w-4xl mx-auto py-4 w-full rounded-full mt-4 sticky top-4 z-50 font-bold">
+    <header className="backdrop-filter backdrop-blur-sm bg-header/70 max-w-4xl mx-auto py-4 w-full rounded-full mt-4 sticky top-4 z-50 font-bold">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <img
