@@ -26,7 +26,7 @@ export default async function GamePage({
 
   return (
     <main className="flex flex-col min-h-screen items-center rounded-3xl pb-20 sm:py-10 bg-background">
-      <div className="grid grid-cols-2 p-8 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 py-20 gap-8 max-w-4xl mx-auto">
         <div>
           <div className="flex justify-between items-start">
             <span className="bg-green-500 text-foreground rounded-full px-3 py-1 text-sm font-semibold shadow">
@@ -68,12 +68,9 @@ export default async function GamePage({
         </div>
         <div>
           <img
-            className="rounded-3xl"
+            className="rounded-3xl h-full"
             src="https://www.mobygames.com/images/covers/l/435360-super-mario-odyssey-nintendo-switch-front-cover.jpg"
           />
-          <div>
-            <h4>Related Games</h4>
-          </div>
         </div>
       </div>
     </main>
