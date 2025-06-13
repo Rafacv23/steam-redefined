@@ -1,3 +1,4 @@
+import { Heart, ShoppingCart } from "lucide-react"
 import { Metadata } from "next"
 
 export async function generateMetadata({
@@ -19,7 +20,62 @@ export default async function GamePage({
 }) {
   const { id } = await params
 
+  console.log(id)
+
   // TODO call the api to fetch the game data and make a loading.ts page inside this route
 
-  return <div>Game Page {id}</div>
+  return (
+    <main className="flex flex-col min-h-screen items-center rounded-3xl pb-20 sm:py-10 bg-background">
+      <div className="grid grid-cols-2 p-8 gap-8 max-w-4xl mx-auto">
+        <div>
+          <div className="flex justify-between items-start">
+            <span className="bg-green-500 text-foreground rounded-full px-3 py-1 text-sm font-semibold shadow">
+              Extremadamente Positivas
+            </span>
+            <button className="bg-header/20 p-2 rounded-full hover:bg-white/30">
+              <Heart size={16} />
+            </button>
+          </div>
+          <div className="flex flex-col gap-2 py-4">
+            <h1 className="text-4xl font-bold">Super Mario Odyssey</h1>
+            <h2>Nintendo</h2>
+            <h2>Nintendo</h2>
+            <p>Released 11, Mayo, 2025</p>
+            <p>
+              Evita la extinción de la raza humana en este juego de
+              acción-aventura postapocalíptico: Stellar Blade™. Disfruta de
+              combates feroces y una historia intrigante mientras resuelves los
+              misterios que llevaron a la caída de la Tierra.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
+                Accion
+              </span>
+              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
+                Aventura
+              </span>
+              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
+                Plataformas
+              </span>
+              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
+                Todos los públicos
+              </span>
+            </div>
+          </div>
+          <button className="bg-primary p-4 rounded-full w-full place-content-center flex items-center gap-2">
+            Add to cart <ShoppingCart size={18} />
+          </button>
+        </div>
+        <div>
+          <img
+            className="rounded-3xl"
+            src="https://www.mobygames.com/images/covers/l/435360-super-mario-odyssey-nintendo-switch-front-cover.jpg"
+          />
+          <div>
+            <h4>Related Games</h4>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
 }
