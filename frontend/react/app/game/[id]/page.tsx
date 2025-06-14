@@ -96,6 +96,24 @@ export default async function GamePage({
                 </ul>
               </div>
             </footer>
+            <section className="bg-card p-4 rounded-lg mt-4">
+              <h4 className="font-semibold text-xl mb-2">
+                About Super Mario Odyssey
+              </h4>
+              <p className="text-sm text-foreground">
+                Solo una espada puede definir el futuro de la humanidad. La
+                Tierra ha quedado abandonada, devastada por criaturas poderosas
+                y extrañas, y lo que queda de la diezmada raza humana ha huido a
+                una colonia en el espacio exterior. Desde la Colonia, EVE llega
+                a nuestro desolado planeta con una misión: salvar a la humanidad
+                y recuperar la Tierra de las garras de los Naytibas, la fuerza
+                malévola que ha arrasado con todo. Sin embargo, a medida que EVE
+                se adentra en las ruinas de la civilización humana para resolver
+                los misterios del pasado y derrota a los Naytibas uno por uno,
+                comprende que su misión no es tan simple como pensaba. De hecho,
+                es posible que nada sea lo que parece…
+              </p>
+            </section>
           </section>
           <section className="col-span-2">
             <img
@@ -136,6 +154,20 @@ export default async function GamePage({
             </div>
             <section className="bg-card p-4 rounded-lg mt-4">
               <h4 className="text-foreground/60 mb-2">Features</h4>
+              <ul className="flex flex-col gap-2">
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+              </ul>
+            </section>
+            <section className="bg-card p-4 rounded-lg mt-4">
+              <h4 className="text-foreground/60 mb-2">Languages</h4>
               <ul className="flex flex-col gap-2">
                 <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
                   <User size={16} /> Single Player
