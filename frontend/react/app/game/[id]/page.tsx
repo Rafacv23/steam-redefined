@@ -1,4 +1,7 @@
 import GameCard from "@/components/game-card"
+import Badge from "@/components/ui/badge"
+import Button from "@/components/ui/button"
+import YouTubeVideo from "@/components/ui/youtube-video"
 import { Heart, ShoppingCart } from "lucide-react"
 import { Metadata } from "next"
 
@@ -26,61 +29,121 @@ export default async function GamePage({
   // TODO call the api to fetch the game data and make a loading.ts page inside this route
 
   return (
-    <main className="flex flex-col min-h-screen items-center rounded-3xl pb-20 sm:py-10 bg-gradient-to-b from-[#19181a] to-[#1b2b3e]">
-      <div className="grid grid-cols-2 py-20 gap-8 max-w-4xl mx-auto">
-        <div>
-          <div className="flex justify-between items-start">
-            <span className="bg-green-500 text-foreground rounded-full px-3 py-1 text-sm font-semibold shadow">
-              Extremadamente Positivas
-            </span>
-            <button className="bg-header/20 p-2 rounded-full hover:bg-white/30">
-              <Heart size={16} />
-            </button>
-          </div>
-          <div className="flex flex-col gap-2 py-4">
-            <h1 className="text-4xl font-bold">Super Mario Odyssey</h1>
-            <h2>Nintendo</h2>
-            <h2>Nintendo</h2>
-            <p>Released 11, Mayo, 2025</p>
-            <p>
+    <main className="flex flex-col min-h-screen items-center rounded-lg pb-20 sm:py-10 bg-gradient-to-b from-header to-background">
+      <div className="max-w-5xl mx-auto">
+        <header className="flex justify-between w-full items-center mb-8">
+          <h1 className="text-4xl font-bold">Super Mario Odyssey</h1>
+          <Button>
+            Whislist <Heart size={16} />
+          </Button>
+        </header>
+        <main className="grid grid-cols-5 gap-8 mb-8">
+          <section className="col-span-3">
+            <YouTubeVideo videoId="wGQHQc_3ycE" />
+            <footer className="flex justify-between items-center gap-4 mt-4 bg-card p-4 rounded-lg">
+              <div>
+                <p className="font-semibold">Super Mario Odyssey</p>
+                <p className="text-secondary text-sm">
+                  Special offer ends in 19 October
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="bg-accent text-header p-2 rounded-lg font-bold">
+                  -35%
+                </span>
+                <div className="flex flex-col font-semibold">
+                  <span className="line-through text-foreground/60">
+                    $49.99
+                  </span>
+                  <span color="text-accent">$20.99</span>
+                </div>
+                <Button>
+                  Add to cart <ShoppingCart size={18} />
+                </Button>
+              </div>
+            </footer>
+            <footer className="gap-4 mt-4 bg-card p-4 rounded-lg space-y-4">
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="font-semibold">
+                    Super Mario Odyssey Deluxe Edition
+                  </p>
+                  <p className="text-secondary text-sm">
+                    Special offer ends in 19 October
+                  </p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="bg-accent text-header p-2 rounded-lg font-bold">
+                    -55%
+                  </span>
+                  <div className="flex flex-col font-semibold">
+                    <span className="line-through text-foreground/60">
+                      $89.99
+                    </span>
+                    <span color="text-accent">$50.99</span>
+                  </div>
+                  <Button>
+                    Add to cart <ShoppingCart size={18} />
+                  </Button>
+                </div>
+              </div>
+              <div className="p-4 rounded-lg bg-header text-sm">
+                <p className="text-foreground/60">Includes</p>
+                <ul>
+                  <li>Super Mario Odyssey</li>
+                  <li>Super Mario Odyssey Artbook</li>
+                  <li>Super Mario Odyssey BSO</li>
+                </ul>
+              </div>
+            </footer>
+          </section>
+          <section className="col-span-2">
+            <img
+              className="rounded-lg mb-4"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nintendo.com%2Fmy%2Fswitch%2Faaac%2Fsns.png&f=1&nofb=1&ipt=e10525e4f6bea5f77edd438970c0198d5548884a42f72f61e6a3b0eabc7fde59"
+            />
+            <p className="mb-4">
               Evita la extinción de la raza humana en este juego de
               acción-aventura postapocalíptico: Stellar Blade™. Disfruta de
               combates feroces y una historia intrigante mientras resuelves los
               misterios que llevaron a la caída de la Tierra.
             </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
-                Accion
+            <span className="bg-green-500 text-header rounded-lg px-3 py-1 text-sm font-semibold shadow">
+              Extremadamente Positivas
+            </span>
+            <p className="text-foreground/60 my-4">
+              Release Date
+              <span className="text-secondary pl-2">11, Mayo, 2025</span>
+            </p>
+            <p className="text-foreground/60 my-4">
+              Developer
+              <span>
+                <span className="text-secondary pl-2">Nintendo</span>
               </span>
-              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
-                Aventura
+            </p>
+            <p className="text-foreground/60 my-4">
+              Publisher
+              <span>
+                <span className="text-secondary pl-2">Nintendo</span>
               </span>
-              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
-                Plataformas
-              </span>
-              <span className="text-sm bg-header px-4 py-2 rounded-3xl">
-                Todos los públicos
-              </span>
+            </p>
+            <h4 className="text-foreground/60">Popular tags</h4>
+            <div className="flex flex-wrap gap-2 mt-2">
+              <Badge>Accion</Badge>
+              <Badge>Aventura</Badge>
+              <Badge>Plataformas</Badge>
+              <Badge>Todos los públicos</Badge>
             </div>
+          </section>
+        </main>
+        <section>
+          <h2 className="text-xl font-bold mb-4">Related Games</h2>
+          <div className="flex flex-wrap gap-4 max-w-4xl items-center">
+            <GameCard />
+            <GameCard />
+            <GameCard />
           </div>
-          <button className="bg-primary font-bold hover:bg-primary/70 text-foreground transition-colors cursor-pointer p-4 rounded-full w-full place-content-center flex items-center gap-2">
-            Add to cart <ShoppingCart size={18} />
-          </button>
-        </div>
-        <div>
-          <img
-            className="rounded-3xl h-full"
-            src="https://www.mobygames.com/images/covers/l/435360-super-mario-odyssey-nintendo-switch-front-cover.jpg"
-          />
-        </div>
-      </div>
-      <div>
-        <h4 className="mb-2 text-xl font-semibold">Related Games</h4>
-        <div className="flex flex-wrap gap-4 max-w-4xl mx-auto items-center">
-          <GameCard />
-          <GameCard />
-          <GameCard />
-        </div>
+        </section>
       </div>
     </main>
   )

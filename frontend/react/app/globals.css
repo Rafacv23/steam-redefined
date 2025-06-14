@@ -3,8 +3,11 @@
 :root {
   --background: #1b2b3e;
   --header: #19181a;
+  --card: #121b24;
   --foreground: #dcdee0;
-  --primary: #2681d8;
+  --primary: #4a609a;
+  --secondary: #5fafde;
+  --accent: #a1cd3a;
 }
 
 @theme inline {
@@ -12,6 +15,9 @@
   --color-foreground: var(--foreground);
   --color-header: var(--header);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
