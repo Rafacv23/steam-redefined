@@ -2,7 +2,7 @@ import GameCard from "@/components/game-card"
 import Badge from "@/components/ui/badge"
 import Button from "@/components/ui/button"
 import YouTubeVideo from "@/components/ui/youtube-video"
-import { Heart, ShoppingCart } from "lucide-react"
+import { Heart, ShoppingCart, User } from "lucide-react"
 import { Metadata } from "next"
 
 export async function generateMetadata({
@@ -134,6 +134,20 @@ export default async function GamePage({
               <Badge>Plataformas</Badge>
               <Badge>Todos los públicos</Badge>
             </div>
+            <section className="bg-card p-4 rounded-lg mt-4">
+              <h4 className="text-foreground/60 mb-2">Features</h4>
+              <ul className="flex flex-col gap-2">
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
+                  <User size={16} /> Single Player
+                </li>
+              </ul>
+            </section>
           </section>
         </main>
         <section>
