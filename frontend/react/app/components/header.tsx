@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDownToLine, Heart, ShoppingCart, User } from "lucide-react"
+import { ArrowDownToLine, Heart, Search, ShoppingCart } from "lucide-react"
 import Button, { buttonVariants } from "@/components/ui/button"
 import {
   Dialog,
@@ -11,9 +11,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
   const router = useRouter()
+  const pathname = usePathname()
 
   const formAction = (formData: FormData) => {
     const rawQuery = formData.get("query")
@@ -25,6 +27,9 @@ export default function Header() {
     }
   }
 
+  const currentPath = `decoration-primary underline-offset-4 underline`
+  const defaultPath = `decoration-inherit`
+
   return (
     <header className="backdrop-filter backdrop-blur-sm bg-header/70 max-w-5xl mx-auto py-4 w-full rounded-lg mt-4 sticky top-4 z-50 font-bold">
       <div className="flex items-center justify-between">
@@ -34,11 +39,23 @@ export default function Header() {
             alt="Steam logo for the header of the page"
             className="h-8"
           />
-          <Link href="/">Store</Link>
-          <Link href="/library">Library</Link>
+          <Link
+            href="/"
+            className={pathname === "/" ? currentPath : defaultPath}
+          >
+            Store
+          </Link>
+          <Link
+            href="/library"
+            className={pathname === "/library" ? currentPath : defaultPath}
+          >
+            Library
+          </Link>
+        </div>
+        <div className="flex items-center gap-4 pr-4">
           <Dialog>
             <DialogTrigger className={buttonVariants({ variant: "outline" })}>
-              Search for games
+              <Search size={18} />
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -99,8 +116,6 @@ export default function Header() {
               </DialogHeader>
             </DialogContent>
           </Dialog>
-        </div>
-        <div className="flex items-center gap-4 pr-4">
           <Link
             href="/whislist"
             className={buttonVariants({ variant: "outline" })}
@@ -109,12 +124,6 @@ export default function Header() {
           </Link>
           <Link href="/cart" className={buttonVariants({ variant: "outline" })}>
             <ShoppingCart size={18} />
-          </Link>
-          <Link
-            href="/profile"
-            className={buttonVariants({ variant: "outline" })}
-          >
-            Gabe Newel <User size={18} />
           </Link>
           <Link
             href="/install"

@@ -1,4 +1,4 @@
-import GameCard from "@/components/game-card"
+import { GameCard } from "@/components/game-card"
 import Badge from "@/components/ui/badge"
 import Button from "@/components/ui/button"
 import YouTubeVideo from "@/components/ui/youtube-video"
@@ -29,7 +29,7 @@ export default async function GamePage({
   // TODO call the api to fetch the game data and make a loading.ts page inside this route
 
   return (
-    <main className="flex flex-col min-h-screen items-center rounded-lg pb-20 sm:py-10 bg-gradient-to-b from-header to-background">
+    <main className="flex flex-col min-h-screen items-center rounded-lg pb-20 sm:py-10 bg-gradient-to-b from-header to-primary/30">
       <div className="max-w-5xl mx-auto">
         <header className="flex justify-between w-full items-center mb-8">
           <h1 className="text-4xl font-bold">Super Mario Odyssey</h1>
