@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDownToLine, Heart, Search, ShoppingCart } from "lucide-react"
+import { ArrowDownToLine, Heart, Search, ShoppingCart, X } from "lucide-react"
 import Button, { buttonVariants } from "@/components/ui/button"
 import {
   Dialog,
@@ -12,10 +12,12 @@ import {
 } from "@/components/ui/dialog"
 import { useRouter } from "next/navigation"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 
 export default function Header() {
   const router = useRouter()
   const pathname = usePathname()
+  const [query, setQuery] = useState<string>("")
 
   const formAction = (formData: FormData) => {
     const rawQuery = formData.get("query")
@@ -62,20 +64,31 @@ export default function Header() {
                 <DialogTitle>Search at Steam</DialogTitle>
                 <form action={formAction} className="relative mt-4">
                   <input
-                    className="border bg-header border-primary px-4 py-2 text-foreground rounded-lg w-full pr-32"
+                    className="border bg-header focus:outline outline-primary border-primary px-4 py-3 text-foreground rounded-lg w-full pr-32"
                     type="text"
                     id="query"
                     name="query"
+                    autoComplete="off"
+                    onChange={(e) => setQuery(e.target.value)}
+                    value={query}
+                    required
                     placeholder="Search for games"
                   />
-                  <div className="absolute inset-y-0 right-0 flex items-center space-x-1 pr-2">
-                    <Button variant="outline" type="reset" size="sm">
-                      Clear
-                    </Button>
-                    <Button type="submit" size="sm">
-                      Search
-                    </Button>
-                  </div>
+                  {query.length > 0 && (
+                    <div className="absolute inset-y-0 right-0 flex items-center space-x-1 pr-2">
+                      <Button
+                        variant="outline"
+                        type="reset"
+                        aria-label="Clear"
+                        onClick={() => setQuery("")}
+                      >
+                        <X size={18} />
+                      </Button>
+                      <Button type="submit" aria-label="Search">
+                        <Search size={18} />
+                      </Button>
+                    </div>
+                  )}
                 </form>
 
                 <div className="my-4">
