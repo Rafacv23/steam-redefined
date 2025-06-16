@@ -1,7 +1,30 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowDownToLine, Heart, ShoppingCart, User } from "lucide-react"
+import Button, { buttonVariants } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+import { useRouter } from "next/navigation"
 
 export default function Header() {
+  const router = useRouter()
+
+  const formAction = (formData: FormData) => {
+    const rawQuery = formData.get("query")
+
+    console.log(rawQuery)
+    if (rawQuery) {
+      const query = rawQuery.toString()
+      router.push(`/search/${query}`)
+    }
+  }
+
   return (
     <header className="backdrop-filter backdrop-blur-sm bg-header/70 max-w-5xl mx-auto py-4 w-full rounded-lg mt-4 sticky top-4 z-50 font-bold">
       <div className="flex items-center justify-between">
@@ -13,30 +36,89 @@ export default function Header() {
           />
           <Link href="/">Store</Link>
           <Link href="/library">Library</Link>
-          <input
-            type="search"
-            name=""
-            id=""
-            placeholder="Search for games"
-            className="bg-header p-4 rounded-lg"
-          />
+          <Dialog>
+            <DialogTrigger className={buttonVariants({ variant: "outline" })}>
+              Search for games
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Search at Steam</DialogTitle>
+                <form action={formAction} className="flex items-center mt-4">
+                  <input
+                    className="border bg-header border-primary px-4 py-2 text-foreground rounded-lg"
+                    type="text"
+                    id="query"
+                    name="query"
+                    placeholder="Search for games"
+                  />
+                  <Button variant="outline" type="reset">
+                    Clear
+                  </Button>
+                  <Button type="submit">Search</Button>
+                </form>
+                <div className="my-4">
+                  <h5 className="mb-2">Recent</h5>
+                  <ul className="flex flex-col gap-2">
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey Artbook
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey BSO
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey Artbook
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey BSO
+                    </li>
+                  </ul>
+                </div>
+                <div className="my-4">
+                  <h5 className="mb-2">Usefull links</h5>
+                  <ul className="flex flex-col gap-2">
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey Artbook
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey BSO
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey Artbook
+                    </li>
+                    <li className="text-secondary bg-header p-2 rounded-lg">
+                      Super Mario Odyssey BSO
+                    </li>
+                  </ul>
+                </div>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
         </div>
         <div className="flex items-center gap-4 pr-4">
-          <Link href="/cart" className="bg-header rounded-full p-4">
+          <Link
+            href="/whislist"
+            className={buttonVariants({ variant: "outline" })}
+          >
             <Heart size={18} />
           </Link>
-          <Link href="/cart" className="bg-header rounded-full p-4">
+          <Link href="/cart" className={buttonVariants({ variant: "outline" })}>
             <ShoppingCart size={18} />
           </Link>
           <Link
             href="/profile"
-            className="bg-header rounded-full p-4 flex items-center gap-2"
+            className={buttonVariants({ variant: "outline" })}
           >
             Gabe Newel <User size={18} />
           </Link>
           <Link
             href="/install"
-            className="bg-primary hover:bg-secondary hover:text-header hover:transition-colors rounded-full p-4"
+            className={buttonVariants({ variant: "default" })}
           >
             <ArrowDownToLine size={18} />
           </Link>
