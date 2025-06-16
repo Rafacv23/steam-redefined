@@ -60,19 +60,24 @@ export default function Header() {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>Search at Steam</DialogTitle>
-                <form action={formAction} className="flex items-center mt-4">
+                <form action={formAction} className="relative mt-4">
                   <input
-                    className="border bg-header border-primary px-4 py-2 text-foreground rounded-lg"
+                    className="border bg-header border-primary px-4 py-2 text-foreground rounded-lg w-full pr-32"
                     type="text"
                     id="query"
                     name="query"
                     placeholder="Search for games"
                   />
-                  <Button variant="outline" type="reset">
-                    Clear
-                  </Button>
-                  <Button type="submit">Search</Button>
+                  <div className="absolute inset-y-0 right-0 flex items-center space-x-1 pr-2">
+                    <Button variant="outline" type="reset" size="sm">
+                      Clear
+                    </Button>
+                    <Button type="submit" size="sm">
+                      Search
+                    </Button>
+                  </div>
                 </form>
+
                 <div className="my-4">
                   <h5 className="mb-2">Recent</h5>
                   <ul className="flex flex-col gap-2">
