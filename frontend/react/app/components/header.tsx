@@ -12,19 +12,63 @@ import {
 } from "@/components/ui/dialog"
 import { useRouter } from "next/navigation"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+const usefullLinks = [
+  {
+    title: "Store",
+    href: "/",
+  },
+  {
+    title: "Library",
+    href: "/library",
+  },
+  {
+    title: "React",
+    href: "https://reactjs.org/",
+  },
+  {
+    title: "Angular",
+    href: "https://angular.io/",
+  },
+  {
+    title: "Vue",
+    href: "https://vuejs.org/",
+  },
+]
 
 export default function Header() {
   const router = useRouter()
   const pathname = usePathname()
   const [query, setQuery] = useState<string>("")
+  const [recentSearchs, setRecentSearchs] = useState<string[]>([])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("recentSearchs")
+      if (stored) {
+        setRecentSearchs(JSON.parse(stored))
+      }
+    }
+  }, [])
 
   const formAction = (formData: FormData) => {
     const rawQuery = formData.get("query")
 
-    console.log(rawQuery)
     if (rawQuery) {
-      const query = rawQuery.toString()
+      const query = rawQuery.toString().trim()
+      if (!query) return
+
+      // Avoid duplicates, most recent first
+      let updatedSearches = [query, ...recentSearchs.filter((q) => q !== query)]
+      // Limit to last 5 searches
+      updatedSearches = updatedSearches.slice(0, 5)
+
+      if (typeof window !== "undefined") {
+        localStorage.setItem("recentSearchs", JSON.stringify(updatedSearches))
+      }
+      setRecentSearchs(updatedSearches)
+
       router.push(`/search/${query}`)
     }
   }
@@ -90,45 +134,39 @@ export default function Header() {
                     </div>
                   )}
                 </form>
-
-                <div className="my-4">
-                  <h5 className="mb-2">Recent</h5>
-                  <ul className="flex flex-col gap-2">
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey Artbook
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey BSO
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey Artbook
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey BSO
-                    </li>
-                  </ul>
-                </div>
+                {recentSearchs.length > 0 && (
+                  <div className="my-4">
+                    <h5 className="mb-2">Recent</h5>
+                    <ul className="flex flex-col gap-2">
+                      {recentSearchs.map((search, index) => (
+                        <li
+                          key={index}
+                          className="text-secondary bg-header p-2 rounded-lg"
+                        >
+                          <Link
+                            href={`/search/${search}`}
+                            title={`Search for ${search}`}
+                          >
+                            {search}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className="my-4">
                   <h5 className="mb-2">Usefull links</h5>
                   <ul className="flex flex-col gap-2">
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey Artbook
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey BSO
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey Artbook
-                    </li>
-                    <li className="text-secondary bg-header p-2 rounded-lg">
-                      Super Mario Odyssey BSO
-                    </li>
+                    {usefullLinks.map((link, index) => (
+                      <li
+                        key={index}
+                        className="text-secondary bg-header p-2 rounded-lg"
+                      >
+                        <Link href={link.href} title={link.title}>
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </DialogHeader>
