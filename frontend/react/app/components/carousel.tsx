@@ -1,47 +1,43 @@
 "use client"
 
 import { useState } from "react"
-import { cn } from "../../lib/utils" // or just use template literals
-import { BigGameCard } from "./game-card"
+import { cn } from "../../lib/utils"
+import { BigGameCard, Game } from "@/components/game-card"
 
-const images = [
-  "https://images4.alphacoders.com/960/thumb-1920-960885.jpg",
-  "https://images4.alphacoders.com/960/thumb-1920-960885.jpg",
-  "https://images4.alphacoders.com/960/thumb-1920-960885.jpg",
-  "https://images4.alphacoders.com/960/thumb-1920-960885.jpg",
-  "https://images4.alphacoders.com/960/thumb-1920-960885.jpg",
-]
+interface CarouselProps {
+  games: Game[]
+}
 
-export default function Carousel() {
+export default function Carousel({ games }: CarouselProps) {
   const [current, setCurrent] = useState(0)
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+    setCurrent((prev) => (prev === 0 ? games.length - 1 : prev - 1))
   }
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    setCurrent((prev) => (prev === games.length - 1 ? 0 : prev + 1))
   }
 
   return (
     <div className="relative w-full">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-        {images.map((img, i) => (
+        {games.map((game, i) => (
           <div
-            key={i}
+            key={game.id}
             className={cn(
               "absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-700 ease-in-out",
               i === current ? "opacity-100 z-20" : "opacity-0 z-10"
             )}
           >
-            <BigGameCard />
+            <BigGameCard game={game} />
           </div>
         ))}
       </div>
 
       {/* Dots */}
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-        {images.map((_, i) => (
+        {games.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}

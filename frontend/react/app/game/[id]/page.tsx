@@ -1,4 +1,4 @@
-import { GameCard } from "@/components/game-card"
+import { Game } from "@/components/game-card"
 import Badge from "@/components/ui/badge"
 import Button from "@/components/ui/button"
 import YouTubeVideo from "@/components/ui/youtube-video"
@@ -24,7 +24,9 @@ export default async function GamePage({
 }) {
   const { id } = await params
 
-  console.log(id)
+  const game: Game = await fetch(`http://localhost:4321/api/games/${id}`).then(
+    (res) => res.json()
+  )
 
   // TODO call the api to fetch the game data and make a loading.ts page inside this route
 
@@ -32,30 +34,30 @@ export default async function GamePage({
     <main className="flex flex-col min-h-screen items-center rounded-lg pb-20 sm:py-10 bg-gradient-to-b from-header to-primary/30">
       <div className="max-w-5xl mx-auto">
         <header className="flex justify-between w-full items-center mb-8">
-          <h1 className="text-4xl font-bold">Super Mario Odyssey</h1>
+          <h1 className="text-4xl font-bold">{game.name}</h1>
           <Button>
             Whislist <Heart size={16} />
           </Button>
         </header>
         <main className="grid grid-cols-5 gap-8 mb-8">
           <section className="col-span-3">
-            <YouTubeVideo videoId="wGQHQc_3ycE" />
+            <YouTubeVideo videoId={game.trailer} />
             <footer className="flex justify-between items-center gap-4 mt-4 bg-card p-4 rounded-lg">
               <div>
-                <p className="font-semibold">Super Mario Odyssey</p>
+                <p className="font-semibold">{game.name}</p>
                 <p className="text-secondary text-sm">
                   Special offer ends in 19 October
                 </p>
               </div>
               <div className="flex items-center gap-4">
                 <span className="bg-accent text-header p-2 rounded-lg font-bold">
-                  -35%
+                  -{game.discount}%
                 </span>
                 <div className="flex flex-col font-semibold">
                   <span className="line-through text-foreground/60">
-                    $49.99
+                    ${game.price}
                   </span>
-                  <span color="text-accent">$20.99</span>
+                  <span color="text-accent">${game.price - game.discount}</span>
                 </div>
                 <Button>
                   Add to cart <ShoppingCart size={18} />
@@ -97,98 +99,69 @@ export default async function GamePage({
               </div>
             </footer>
             <section className="bg-card p-4 rounded-lg mt-4">
-              <h4 className="font-semibold text-xl mb-2">
-                About Super Mario Odyssey
-              </h4>
-              <p className="text-sm text-foreground">
-                Solo una espada puede definir el futuro de la humanidad. La
-                Tierra ha quedado abandonada, devastada por criaturas poderosas
-                y extrañas, y lo que queda de la diezmada raza humana ha huido a
-                una colonia en el espacio exterior. Desde la Colonia, EVE llega
-                a nuestro desolado planeta con una misión: salvar a la humanidad
-                y recuperar la Tierra de las garras de los Naytibas, la fuerza
-                malévola que ha arrasado con todo. Sin embargo, a medida que EVE
-                se adentra en las ruinas de la civilización humana para resolver
-                los misterios del pasado y derrota a los Naytibas uno por uno,
-                comprende que su misión no es tan simple como pensaba. De hecho,
-                es posible que nada sea lo que parece…
-              </p>
+              <h4 className="font-semibold text-xl mb-2">About {game.name}</h4>
+              <p className="text-sm text-foreground">{game.about}</p>
             </section>
           </section>
           <section className="col-span-2">
-            <img
-              className="rounded-lg mb-4"
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.nintendo.com%2Fmy%2Fswitch%2Faaac%2Fsns.png&f=1&nofb=1&ipt=e10525e4f6bea5f77edd438970c0198d5548884a42f72f61e6a3b0eabc7fde59"
-            />
-            <p className="mb-4">
-              Evita la extinción de la raza humana en este juego de
-              acción-aventura postapocalíptico: Stellar Blade™. Disfruta de
-              combates feroces y una historia intrigante mientras resuelves los
-              misterios que llevaron a la caída de la Tierra.
-            </p>
+            <img className="rounded-lg mb-4" src={game.poster} />
+            <p className="mb-4">{game.description}</p>
             <span className="bg-green-500 text-header rounded-lg px-3 py-1 text-sm font-semibold shadow">
-              Extremadamente Positivas
+              {game.rating} | {game.total_reviews}
             </span>
             <p className="text-foreground/60 my-4">
               Release Date
-              <span className="text-secondary pl-2">11, Mayo, 2025</span>
+              <span className="text-secondary pl-2">{game.released}</span>
             </p>
             <p className="text-foreground/60 my-4">
               Developer
               <span>
-                <span className="text-secondary pl-2">Nintendo</span>
+                <span className="text-secondary pl-2">{game.developer}</span>
               </span>
             </p>
             <p className="text-foreground/60 my-4">
               Publisher
               <span>
-                <span className="text-secondary pl-2">Nintendo</span>
+                <span className="text-secondary pl-2">{game.publisher}</span>
               </span>
             </p>
             <h4 className="text-foreground/60">Popular tags</h4>
             <div className="flex flex-wrap gap-2 mt-2">
-              <Badge>Accion</Badge>
-              <Badge>Aventura</Badge>
-              <Badge>Plataformas</Badge>
-              <Badge>Todos los públicos</Badge>
+              {game.tags.map((tag) => (
+                <Badge key={tag}>{tag}</Badge>
+              ))}
             </div>
             <section className="bg-card p-4 rounded-lg mt-4">
               <h4 className="text-foreground/60 mb-2">Features</h4>
               <ul className="flex flex-col gap-2">
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
+                {game.features.map((feature) => (
+                  <li
+                    className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg"
+                    key={feature}
+                  >
+                    <User size={16} /> {feature}
+                  </li>
+                ))}
               </ul>
             </section>
             <section className="bg-card p-4 rounded-lg mt-4">
               <h4 className="text-foreground/60 mb-2">Languages</h4>
               <ul className="flex flex-col gap-2">
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
-                <li className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg">
-                  <User size={16} /> Single Player
-                </li>
+                {game.languages.map((language) => (
+                  <li
+                    className="flex items-center gap-2 text-secondary bg-header p-2 rounded-lg"
+                    key={language}
+                  >
+                    <User size={16} /> {language}
+                  </li>
+                ))}
               </ul>
             </section>
           </section>
         </main>
         <section>
           <h2 className="text-xl font-bold mb-4">Related Games</h2>
-          <div className="flex flex-wrap gap-4 max-w-4xl items-center">
-            <GameCard />
-            <GameCard />
-            <GameCard />
-          </div>
+          <div className="flex flex-wrap gap-4 max-w-4xl items-center"></div>
         </section>
       </div>
     </main>

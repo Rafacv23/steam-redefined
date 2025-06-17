@@ -1,23 +1,112 @@
 [
   {
     "id": 1,
-    "name": "Counter-Strike: Global Offensive",
-    "image": "https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg?t=1675156558",
-    "description": "Counter-Strike: Global Offensive is a first-person shooter video game developed by Valve Corporation and published by Valve Software. It is the sixth game in the Counter-Strike series and the first in the series to be released on Steam.",
-    "price": 10
+    "name": "Elden Ring",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mobygames.com%2Fimages%2Fcovers%2Fl%2F775869-elden-ring-xbox-one-front-cover.jpg&f=1&nofb=1&ipt=e5253ca9fa2dfc236b87d18f649942244f5040020b7cf31775bcb251a35a94f9",
+    "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748630546",
+    "trailer": "E3Huy2cdih0",
+    "discount": 30,
+    "developer": "FromSoftware",
+    "publisher": "Bandai Namco",
+    "important": true,
+    "released": "2022-02-25",
+    "tags": ["Open World", "Souls-like", "Fantasy"],
+    "features": ["Single-player", "Controller Support", "Steam Achievements"],
+    "languages": ["English", "Japanese", "French", "German"],
+    "dlcs": ["Shadow of the Erdtree"],
+    "rating": 9.7,
+    "total_reviews": 250000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      "Windows 10",
+      "Intel i7-8700K",
+      "16 GB RAM",
+      "NVIDIA GTX 1070",
+      "60 GB storage"
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "BladeDancer",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring.",
+    "about": "Elden Ring is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R.R. Martin.",
+    "price": 59.99
   },
   {
     "id": 2,
-    "name": "Half-Life 2",
-    "image": "https://steamcdn-a.akamaihd.net/steam/apps/200790/header.jpg?t=1675156558",
-    "description": "Half-Life 2 is a first-person shooter video game developed by Valve Corporation and published by Valve Software. It is the fifth game in the Half-Life series and the second in the series to be released on Steam.",
-    "price": 15
-  },
-  {
-    "id": 3,
-    "name": "Portal 2",
-    "image": "https://steamcdn-a.akamaihd.net/steam/apps/50/header.jpg?t=1675156558",
-    "description": "Portal 2 is a first-person shooter video game developed by Valve Corporation and published by Valve Software. It is the second game in the Portal series and the first in the series to be released on Steam.",
-    "price": 20
+    "name": "The Alters",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.everyeye.it%2Fimg-cover%2Fthe-alters-v5-49666-340.webp&f=1&nofb=1&ipt=851608886a379b966be9dc53567e655f42f00c9fd931c1255690cd444112fe06",
+    "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1601570/header.jpg?t=1750167561",
+    "trailer": "965Km7t6KwM",
+    "discount": 30,
+    "developer": "11 bit studios",
+    "publisher": "11 bit studios",
+    "important": true,
+    "released": "2022-02-25",
+    "tags": ["Open World", "Souls-like", "Fantasy"],
+    "features": ["Single-player", "Controller Support", "Steam Achievements"],
+    "languages": ["English", "Japanese", "French", "German"],
+    "dlcs": ["Shadow of the Erdtree"],
+    "rating": 9.7,
+    "total_reviews": 250000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      "Windows 10",
+      "Intel i7-8700K",
+      "16 GB RAM",
+      "NVIDIA GTX 1070",
+      "60 GB storage"
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "BladeDancer",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring.",
+    "about": "Elden Ring is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R.R. Martin.",
+    "price": 59.99
   }
 ]

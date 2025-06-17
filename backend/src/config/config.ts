@@ -1,5 +1,3 @@
-// Load and type env variables
-
 import dotenv from 'dotenv'
 
 dotenv.config()

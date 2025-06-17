@@ -1,7 +1,9 @@
 import { Request, NextFunction, Response } from 'express'
-import games from '@/data/games.json'
+import gamesJson from '@/data/games.json'
+import type { Game } from '@/models/game'
 
-//Get all games
+const games = gamesJson as Game[] // ⬅️ Fix here
+
 export const getGames = (req: Request, res: Response, next: NextFunction) => {
   try {
     res.json(games)
@@ -10,7 +12,6 @@ export const getGames = (req: Request, res: Response, next: NextFunction) => {
   }
 }
 
-// return a single game based on his id
 export const getGameById = (
   req: Request,
   res: Response,
