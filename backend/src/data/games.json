@@ -13,16 +13,39 @@
     "tags": ["Open World", "Souls-like", "Fantasy"],
     "features": ["Single-player", "Controller Support", "Steam Achievements"],
     "languages": ["English", "Japanese", "French", "German"],
-    "dlcs": ["Shadow of the Erdtree"],
-    "rating": 9.7,
+    "dlcs": [
+      {
+        "name": "Shadow of the Erdtree"
+      },
+      {
+        "name": "Elden Ring Complete Edition",
+        "content": ["Elden Ring", "Shadow of the Erdtree"]
+      }
+    ],
+    "rating": 95,
     "total_reviews": 250000,
     "steam_deck": "Verified",
     "system_requiremens": [
-      "Windows 10",
-      "Intel i7-8700K",
-      "16 GB RAM",
-      "NVIDIA GTX 1070",
-      "60 GB storage"
+      {
+        "name": "OS",
+        "value": "Windows 10 or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i7-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1070."
+      },
+      {
+        "name": "Storage",
+        "value": "60 GB storage."
+      }
     ],
     "reviews": [
       {

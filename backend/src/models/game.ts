@@ -11,6 +11,16 @@ type LinkType = {
   url: string
 }
 
+type Dlc = {
+  name: string
+  content?: string[]
+}
+
+type SystemRequirement = {
+  name: string
+  value: string
+}
+
 export type Game = {
   id: number
   name: string
@@ -25,11 +35,11 @@ export type Game = {
   tags: string[]
   features: string[]
   languages: string[]
-  dlcs: string[]
+  dlcs: Dlc[]
   rating: number
   total_reviews: number
   steam_deck: string
-  system_requiremens: string[]
+  system_requiremens: SystemRequirement[]
   reviews: Review[]
   links: LinkType[]
   description: string
