@@ -1,6 +1,8 @@
 import { Heart, ShoppingCart } from "lucide-react"
 import Link from "next/link"
 import Button from "./ui/button"
+import { calculateGameRating, calculatePrice } from "../../lib/utils"
+import { WhislistBtn } from "./client-btns"
 
 type Review = {
   author: string
@@ -13,6 +15,17 @@ type Review = {
 type LinkType = {
   name: string
   url: string
+}
+
+type Dlc = {
+  name: string
+  content?: string[]
+  price: number
+}
+
+type SystemRequirement = {
+  name: string
+  value: string
 }
 
 export type Game = {
@@ -29,11 +42,11 @@ export type Game = {
   tags: string[]
   features: string[]
   languages: string[]
-  dlcs: string[]
+  dlcs: Dlc[]
   rating: number
   total_reviews: number
   steam_deck: string
-  system_requiremens: string[]
+  system_requiremens: SystemRequirement[]
   reviews: Review[]
   links: LinkType[]
   description: string
@@ -53,12 +66,24 @@ export function GameCard({ game }: { game: Game }) {
         <div className="absolute inset-0 bg-background/30" />
         <div className="relative z-10 flex flex-col justify-between h-full p-2 text-foreground">
           <div className="flex justify-between items-center">
-            <span className="bg-green-500 text-header rounded-lg text-sm p-2 font-semibold shadow">
-              {game.rating} | {game.total_reviews}
+            <span
+              className={`${
+                game.rating < 50
+                  ? "bg-red-500"
+                  : game.rating < 75
+                    ? "bg-yellow-400"
+                    : "bg-green-500"
+              } text-header rounded-lg px-3 py-1 text-sm font-semibold shadow`}
+            >
+              {calculateGameRating(game.rating)}
             </span>
-            <Button size="default" variant="outline">
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
           <div className="mt-auto bg-background/50 rounded-lg p-2">
             <h3 className="text-2xl font-bold">{game.name}</h3>
@@ -71,7 +96,7 @@ export function GameCard({ game }: { game: Game }) {
                   ${game.price}
                 </p>
                 <p className="text-lg font-semibold">
-                  {game.price - game.discount}
+                  {calculatePrice(game.price, game.discount)}
                 </p>
               </div>
               <Button>Buy Now</Button>
@@ -97,14 +122,32 @@ export function DetailedGameCard({ game }: { game: Game }) {
         />
         <div className="flex flex-col justify-between p-2 text-foreground w-full">
           <div className="flex justify-between items-center">
-            <span className="bg-green-500 text-header rounded-lg text-sm p-2 font-semibold shadow">
-              {game.rating} | {game.total_reviews}
-            </span>
-            <Button size="default" variant="outline">
+            <div>
+              <span
+                className={`${
+                  game.rating < 50
+                    ? "bg-red-500"
+                    : game.rating < 75
+                      ? "bg-yellow-400"
+                      : "bg-green-500"
+                } text-header rounded-lg px-3 py-1 text-sm font-semibold shadow`}
+              >
+                {calculateGameRating(game.rating)}
+              </span>
+              <span className="text-foreground-secondary pl-2">
+                {game.total_reviews} Reviews
+              </span>
+            </div>
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+              size="default"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
-          <div className="mt-2 rounded-lg p-2">
+          <div className="mt-2 rounded-lg">
             <h3 className="text-2xl font-bold">{game.name}</h3>
             <p className="text-lg text-foreground-secondary">
               {game.developer}
@@ -119,7 +162,7 @@ export function DetailedGameCard({ game }: { game: Game }) {
                     ${game.price}
                   </p>
                   <p className="text-lg font-semibold">
-                    ${game.price - game.discount}
+                    ${calculatePrice(game.price, game.discount)}
                   </p>
                 </div>
               </div>
@@ -146,12 +189,25 @@ export function BigGameCard({ game }: { game: Game }) {
         <div className="absolute inset-0 bg-background/30" />
         <div className="relative z-10 flex flex-col justify-between h-full p-2 text-foreground">
           <div className="flex justify-between items-center">
-            <span className="bg-green-500 text-header rounded-lg text-sm p-2 font-semibold shadow">
-              {game.rating} | {game.total_reviews}
+            <span
+              className={`${
+                game.rating < 50
+                  ? "bg-red-500"
+                  : game.rating < 75
+                    ? "bg-yellow-400"
+                    : "bg-green-500"
+              } text-header rounded-lg px-3 py-1 text-sm font-semibold shadow`}
+            >
+              {calculateGameRating(game.rating)}
             </span>
-            <Button size="default" variant="outline">
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+              size="default"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
           <div className="mt-auto bg-background/50 rounded-lg p-2">
             <h3 className="text-2xl font-bold">{game.name}</h3>
@@ -164,7 +220,7 @@ export function BigGameCard({ game }: { game: Game }) {
                   ${game.price}
                 </p>
                 <p className="text-lg font-semibold">
-                  ${game.price - game.discount}
+                  ${calculatePrice(game.price, game.discount)}
                 </p>
               </div>
               <Button>Buy Now</Button>

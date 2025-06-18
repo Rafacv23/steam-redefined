@@ -13,16 +13,39 @@
     "tags": ["Open World", "Souls-like", "Fantasy"],
     "features": ["Single-player", "Controller Support", "Steam Achievements"],
     "languages": ["English", "Japanese", "French", "German"],
-    "dlcs": ["Shadow of the Erdtree"],
-    "rating": 9.7,
+    "dlcs": [
+      {
+        "name": "Shadow of the Erdtree"
+      },
+      {
+        "name": "Elden Ring Complete Edition",
+        "content": ["Elden Ring", "Shadow of the Erdtree"]
+      }
+    ],
+    "rating": 95,
     "total_reviews": 250000,
     "steam_deck": "Verified",
     "system_requiremens": [
-      "Windows 10",
-      "Intel i7-8700K",
-      "16 GB RAM",
-      "NVIDIA GTX 1070",
-      "60 GB storage"
+      {
+        "name": "OS",
+        "value": "Windows 10 or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i7-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1070."
+      },
+      {
+        "name": "Storage",
+        "value": "60 GB storage."
+      }
     ],
     "reviews": [
       {
@@ -56,28 +79,165 @@
   },
   {
     "id": 2,
+    "name": "Stellar Blade",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BNjZiODYzNjctNTJkZi00Y2YxLTgyNTktZDYyZTZmZTIyMmVlXkEyXkFqcGdeQXVyMTk2OTAzNTI%40._V1_.jpg&f=1&nofb=1&ipt=c04fb54d9383b2766ff4b8575d0f79c614cadc4d282fead6366ef50067c978f6",
+    "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/header.jpg?t=1749683596",
+    "trailer": "DSznLWimMlU",
+    "discount": 10,
+    "developer": "SHIFT UP Corporation",
+    "publisher": "PlayStation PC LLC",
+    "important": true,
+    "released": "2025-06-11",
+    "tags": [
+      "Action",
+      "Souls-like",
+      "Hack and slash",
+      "Adventure",
+      "Action RPG",
+      "Female protagonist",
+      "Sexual content"
+    ],
+    "features": [
+      "Single-player",
+      "Controller Support",
+      "Steam Achievements",
+      "Steam Cloud",
+      "HDR",
+      "Stats"
+    ],
+    "languages": [
+      "English",
+      "Japanese",
+      "French",
+      "German",
+      "Chinese",
+      "Korean"
+    ],
+    "dlcs": [
+      {
+        "name": "Stellar Blade Complete Edition",
+        "content": [
+          "Stellar Blade Deluxe Pack",
+          "Stellar Blade x GODDESS OF VICTORY: NIKKE",
+          "Stellar Blade x NieR Automata"
+        ],
+        "price": 89.99
+      }
+    ],
+    "rating": 95,
+    "total_reviews": 7771,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i5-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1060."
+      },
+      {
+        "name": "Storage",
+        "value": "75 GB storage."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "GhostRidder",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "Evita la extinción de la raza humana en este juego de acción-aventura postapocalíptico: Stellar Blade™. Disfruta de combates feroces y una historia intrigante mientras resuelves los misterios que llevaron a la caída de la Tierra.",
+    "about": "Solo una espada puede definir el futuro de la humanidad. La Tierra ha quedado abandonada, devastada por criaturas poderosas y extrañas, y lo que queda de la diezmada raza humana ha huido a una colonia en el espacio exterior. Desde la Colonia, EVE llega a nuestro desolado planeta con una misión: salvar a la humanidad y recuperar la Tierra de las garras de los Naytibas, la fuerza malévola que ha arrasado con todo. Sin embargo, a medida que EVE se adentra en las ruinas de la civilización humana para resolver los misterios del pasado y derrota a los Naytibas uno por uno, comprende que su misión no es tan simple como pensaba. De hecho, es posible que nada sea lo que parece…",
+    "price": 69.99
+  },
+  {
+    "id": 3,
     "name": "The Alters",
     "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.everyeye.it%2Fimg-cover%2Fthe-alters-v5-49666-340.webp&f=1&nofb=1&ipt=851608886a379b966be9dc53567e655f42f00c9fd931c1255690cd444112fe06",
     "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1601570/header.jpg?t=1750167561",
     "trailer": "965Km7t6KwM",
-    "discount": 30,
+    "discount": 10,
     "developer": "11 bit studios",
     "publisher": "11 bit studios",
     "important": true,
-    "released": "2022-02-25",
-    "tags": ["Open World", "Souls-like", "Fantasy"],
-    "features": ["Single-player", "Controller Support", "Steam Achievements"],
-    "languages": ["English", "Japanese", "French", "German"],
-    "dlcs": ["Shadow of the Erdtree"],
-    "rating": 9.7,
-    "total_reviews": 250000,
-    "steam_deck": "Verified",
+    "released": "2025-06-13",
+    "tags": [
+      "Survival",
+      "Base building",
+      "Manage",
+      "Exploration",
+      "Action adventure",
+      "Strategy",
+      "Science-fiction",
+      "3D"
+    ],
+    "features": [
+      "Single-player",
+      "Controller Support",
+      "Steam Achievements",
+      "Steam Cloud"
+    ],
+    "languages": ["English", "Japanese", "French", "German", "Spanish"],
+    "dlcs": [
+      {
+        "name": "The Alters: Deluxe Edition",
+        "price": 47.83,
+        "content": ["The Alters", "The Alters Original Soundtrack"]
+      }
+    ],
+    "rating": 88,
+    "total_reviews": 2875,
+    "steam_deck": "Playable",
     "system_requiremens": [
-      "Windows 10",
-      "Intel i7-8700K",
-      "16 GB RAM",
-      "NVIDIA GTX 1070",
-      "60 GB storage"
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i7-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1060."
+      },
+      {
+        "name": "Storage",
+        "value": "50 GB storage."
+      }
     ],
     "reviews": [
       {
@@ -105,8 +265,453 @@
         "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
       }
     ],
-    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring.",
-    "about": "Elden Ring is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R.R. Martin.",
-    "price": 59.99
+    "description": "Explora un emotivo juego de ciencia ficción que supone una mezcla única de aventura, supervivencia y construcción de bases. Juega como Jan Dolski, un trabajador normal que crea otras versiones de sí mismo para huir de un planeta en el que hasta los rayos del sol son letales.",
+    "about": "The Alters es un ambicioso juego de supervivencia y ciencia ficción con un giro único. Te pones en la piel de Jan Dolski, el único superviviente de una expedición fallida en un planeta hostil. Para sobrevivir, deberás formar una tripulación nueva para tu base móvil. Con una sustancia llamada rapidium, tendrás que crear versiones alternativas de Jan, los alters, cada una caracterizada por una decisión crucial diferente que tuvo que tomar el protagonista en el pasado",
+    "price": 34.99
+  },
+  {
+    "id": 4,
+    "name": "Timberborn",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.cloudflare.steamstatic.com%2Fsteam%2Fapps%2F1062090%2Flibrary_600x900_2x.jpg%3Ft%3D1671100137&f=1&nofb=1&ipt=0795faf36f604da2f8c75b7a3019e2ec255e372c02f15eaa25b9f3d6229486b7",
+    "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062090/4bc77318229981d441aa33fad4959c684116f599/header.jpg?t=1748943231",
+    "trailer": "lx01nK_r-6c",
+    "discount": 30,
+    "developer": "Mechanistry",
+    "publisher": "Mechanistry",
+    "important": false,
+    "released": "2021-09-15",
+    "tags": [
+      "Base building",
+      "Colony sim",
+      "Voxel",
+      "Nature",
+      "Sandbox",
+      "Construction",
+      "Automation"
+    ],
+    "features": ["Single-player", "Steam Workshop", "Steam Cloud"],
+    "languages": ["English", "Japanese", "French", "German", "Spanish"],
+    "dlcs": [
+      {
+        "name": "Timberborn Soundtrack",
+        "price": 6.89
+      }
+    ],
+    "rating": 96,
+    "total_reviews": 29728,
+    "steam_deck": "Playable",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "4-core 1.7 GHz or better"
+      },
+      {
+        "name": "RAM",
+        "value": "4 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 950."
+      },
+      {
+        "name": "Storage",
+        "value": "3 GB storage."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "BladeDancer",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "La humanidad se ha extinguido. En un mundo azotado por las sequías y los residuos tóxicos, ¿les pasará lo mismo a tus castores leñapunk? Disfruta de un juego de construcción con animales inteligentes, arquitectura vertical, física de líquidos y terraformación. ¡Contiene altas dosis de madera!",
+    "about": "La humanidad dejó la Tierra hecha un páramo y se extinguió, pero otras especies sobrevivieron y evolucionaron. ¡Escoge una de las facciones de castores y comprueba hasta dónde puede llegar tu colonia! Controla una de las dos facciones de castores: los Bucólicos, que adoran la naturaleza, o los industriales Dienteférreos. Cada facción tiene su estilo, sus edificios y sus habilidades especiales. ¡Elige la que mejor se adapte a tu estilo de juego! Prepara tu asentamiento para las sequías cíclicas y las oleadas de residuos tóxicos. Guarda comida y mantén los bosques y los cultivos con vida aunque los ríos se hayan secado. Usa las fuentes de agua naturales y el riego artificial para que la tierra siga siendo cultivable y tus castores estén sanos y salvos.",
+    "price": 33.99
+  },
+  {
+    "id": 5,
+    "name": "Hades",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256783611/movie_max.mp4",
+    "discount": 20,
+    "developer": "Supergiant Games",
+    "publisher": "Supergiant Games",
+    "important": true,
+    "released": "2020-09-17",
+    "tags": ["Roguelike", "Action", "Indie", "Isometric", "Dungeon Crawler"],
+    "features": [
+      "Single-player",
+      "Controller support",
+      "Steam Achievements",
+      "Cloud Saves"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Simplified Chinese",
+      "Japanese"
+    ],
+    "dlcs": [],
+    "rating": 97,
+    "total_reviews": 200000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      { "name": "OS", "value": "Windows 7 SP1" },
+      { "name": "Processor", "value": "Dual Core 2.4 GHz" },
+      { "name": "Memory", "value": "4 GB RAM" },
+      { "name": "Graphics", "value": "1GB VRAM / DirectX 10+ support" },
+      { "name": "Storage", "value": "15 GB available space" }
+    ],
+    "reviews": [
+      {
+        "author": "PlayerOne",
+        "date": "2021-06-10",
+        "rating": 10,
+        "hours": 120,
+        "comment": "One of the best roguelikes I've ever played. Amazing story and gameplay."
+      },
+      {
+        "author": "ZagreusMain",
+        "date": "2022-01-25",
+        "rating": 9,
+        "hours": 85,
+        "comment": "Addictive loop, brilliant art and music."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1145360/Hades/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.supergiantgames.com/games/hades/"
+      }
+    ],
+    "description": "Hades is a god-like rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles.",
+    "about": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler.",
+    "price": 24.99
+  },
+  {
+    "id": 6,
+    "name": "Hollow Knight",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256682566/movie_max.mp4",
+    "discount": 50,
+    "developer": "Team Cherry",
+    "publisher": "Team Cherry",
+    "important": true,
+    "released": "2017-02-24",
+    "tags": ["Metroidvania", "Souls-like", "Platformer", "2D"],
+    "features": [
+      "Single-player",
+      "Full controller support",
+      "Steam Achievements"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "German",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "dlcs": [],
+    "rating": 95,
+    "total_reviews": 300000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 7"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core 2 Duo E5200"
+      },
+      {
+        "name": "Memory",
+        "value": "4 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "GeForce 9800GTX+ (1GB)"
+      },
+      {
+        "name": "Storage",
+        "value": "9 GB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "KnightOfHallownest",
+        "date": "2020-10-01",
+        "rating": 10,
+        "hours": 150,
+        "comment": "A masterpiece of world-building and tight platforming."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/367520/Hollow_Knight/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.hollowknight.com/"
+      }
+    ],
+    "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes.",
+    "about": "Explore twisting caverns, battle tainted creatures, and escape intricate traps in a beautifully hand-drawn world.",
+    "price": 14.99
+  },
+  {
+    "id": 7,
+    "name": "Celeste",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256701302/movie_max.mp4",
+    "discount": 75,
+    "developer": "Maddy Makes Games",
+    "publisher": "Maddy Makes Games",
+    "important": false,
+    "released": "2018-01-25",
+    "tags": ["Platformer", "Indie", "Pixel Graphics", "Story Rich"],
+    "features": [
+      "Single-player",
+      "Full controller support",
+      "Steam Achievements"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Japanese",
+      "Portuguese"
+    ],
+    "dlcs": [],
+    "rating": 96,
+    "total_reviews": 85000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 7"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core i3 M380"
+      },
+      {
+        "name": "Memory",
+        "value": "2 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "Intel HD 4000"
+      },
+      {
+        "name": "Storage",
+        "value": "1.2 GB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "JumpMaster",
+        "date": "2019-03-05",
+        "rating": 10,
+        "hours": 40,
+        "comment": "Brilliant and emotional, with pixel-perfect controls."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/504230/Celeste/"
+      }
+    ],
+    "description": "Help Madeline survive her journey to the top of Celeste Mountain in this super-tight platformer.",
+    "about": "A game about climbing a mountain and overcoming personal challenges. Heartfelt and difficult in the best way.",
+    "price": 19.99
+  },
+  {
+    "id": 8,
+    "name": "Stardew Valley",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256671271/movie_max.mp4",
+    "discount": 10,
+    "developer": "ConcernedApe",
+    "publisher": "ConcernedApe",
+    "important": true,
+    "released": "2016-02-26",
+    "tags": ["Farming Sim", "RPG", "Pixel Graphics", "Relaxing", "Indie"],
+    "features": [
+      "Single-player",
+      "Multiplayer",
+      "Co-op",
+      "Steam Cloud",
+      "Controller support"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Japanese",
+      "Chinese"
+    ],
+    "dlcs": [],
+    "rating": 98,
+    "total_reviews": 500000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows Vista or greater"
+      },
+      {
+        "name": "Processor",
+        "value": "2 GHz"
+      },
+      {
+        "name": "Memory",
+        "value": "2 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "256 MB video memory, shader model 3.0+"
+      },
+      {
+        "name": "Storage",
+        "value": "500 MB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "FarmerJoe",
+        "date": "2019-06-30",
+        "rating": 10,
+        "hours": 300,
+        "comment": "Relaxing and addictive. Best farming sim ever."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.stardewvalley.net/"
+      }
+    ],
+    "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life.",
+    "about": "Turn your overgrown fields into a thriving farm. Learn to live off the land and create a second home in the Valley.",
+    "price": 13.49
+  },
+  {
+    "id": 9,
+    "name": "Cyberpunk 2077",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256810257/movie_max.mp4",
+    "discount": 50,
+    "developer": "CD PROJEKT RED",
+    "publisher": "CD PROJEKT RED",
+    "important": true,
+    "released": "2020-12-10",
+    "tags": ["Open World", "RPG", "Futuristic", "Story Rich"],
+    "features": ["Single-player", "Achievements", "Controller support"],
+    "languages": [
+      "English",
+      "Polish",
+      "French",
+      "German",
+      "Japanese",
+      "Spanish"
+    ],
+    "dlcs": [
+      {
+        "name": "Phantom Liberty",
+        "price": 29.99
+      }
+    ],
+    "rating": 80,
+    "total_reviews": 550000,
+    "steam_deck": "Playable",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core i5-3570K or AMD FX-8310"
+      },
+      {
+        "name": "Memory",
+        "value": "8 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "GTX 780 or Radeon RX 470"
+      },
+      {
+        "name": "Storage",
+        "value": "70 GB SSD"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "NightCityRunner",
+        "date": "2021-03-15",
+        "rating": 8,
+        "hours": 90,
+        "comment": "Rough launch, but incredible world-building and storytelling."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.cyberpunk.net/"
+      }
+    ],
+    "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "about": "Play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
+    "price": 29.99
   }
 ]

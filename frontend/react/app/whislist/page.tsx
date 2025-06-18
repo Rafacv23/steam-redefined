@@ -1,4 +1,4 @@
-import { DetailedGameCard } from "@/components/game-card"
+import WhislistedGames from "@/components/whislisted-games"
 
 const sortOptions = [
   { value: "name", label: "Name" },
@@ -37,20 +37,7 @@ export default function WhislistPage() {
             </select>
           </nav>
         </header>
-        <ul className="flex flex-col gap-4 w-full">
-          <li>
-            <DetailedGameCard />
-          </li>
-          <li>
-            <DetailedGameCard />
-          </li>
-          <li>
-            <DetailedGameCard />
-          </li>
-          <li>
-            <DetailedGameCard />
-          </li>
-        </ul>
+        <WhislistedGames />
       </main>
     </div>
   )
