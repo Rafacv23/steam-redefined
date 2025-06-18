@@ -20,6 +20,7 @@ type LinkType = {
 type Dlc = {
   name: string
   content?: string[]
+  price: number
 }
 
 type SystemRequirement = {

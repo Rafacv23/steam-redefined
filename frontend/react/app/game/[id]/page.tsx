@@ -99,10 +99,10 @@ export default async function GamePage({
                     </span>
                     <div className="flex flex-col font-semibold">
                       <span className="line-through text-foreground/60">
-                        ${game.price}
+                        ${dlc.price}
                       </span>
                       <span color="text-accent">
-                        ${calculatePrice(game.price, game.discount)}
+                        ${calculatePrice(dlc.price, game.discount)}
                       </span>
                     </div>
                     <Button>
@@ -249,6 +249,25 @@ export default async function GamePage({
               </div>
             ))}
           </div>
+        </section>
+        <section id="comments" className="bg-card p-4 rounded-lg mt-4">
+          <h2 className="text-xl font-bold mb-4">
+            User reviews for {game.name}
+          </h2>
+          <ul className="flex flex-col gap-4">
+            {game.reviews.map((review) => (
+              <li
+                key={review.author}
+                className="flex flex-col gap-2 bg-header rounded-lg p-4 shadow-xl"
+              >
+                <h5>{review.author}</h5>
+                <p>{review.comment}</p>
+                <p className="text-secondary">
+                  {review.date} • {review.rating} • {review.hours} hours
+                </p>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </main>

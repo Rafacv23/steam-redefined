@@ -79,6 +79,108 @@
   },
   {
     "id": 2,
+    "name": "Stellar Blade",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BNjZiODYzNjctNTJkZi00Y2YxLTgyNTktZDYyZTZmZTIyMmVlXkEyXkFqcGdeQXVyMTk2OTAzNTI%40._V1_.jpg&f=1&nofb=1&ipt=c04fb54d9383b2766ff4b8575d0f79c614cadc4d282fead6366ef50067c978f6",
+    "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/header.jpg?t=1749683596",
+    "trailer": "DSznLWimMlU",
+    "discount": 10,
+    "developer": "SHIFT UP Corporation",
+    "publisher": "PlayStation PC LLC",
+    "important": true,
+    "released": "2025-06-11",
+    "tags": [
+      "Action",
+      "Souls-like",
+      "Hack and slash",
+      "Adventure",
+      "Action RPG",
+      "Female protagonist",
+      "Sexual content"
+    ],
+    "features": [
+      "Single-player",
+      "Controller Support",
+      "Steam Achievements",
+      "Steam Cloud",
+      "HDR",
+      "Stats"
+    ],
+    "languages": [
+      "English",
+      "Japanese",
+      "French",
+      "German",
+      "Chinese",
+      "Korean"
+    ],
+    "dlcs": [
+      {
+        "name": "Stellar Blade Complete Edition",
+        "content": [
+          "Stellar Blade Deluxe Pack",
+          "Stellar Blade x GODDESS OF VICTORY: NIKKE",
+          "Stellar Blade x NieR Automata"
+        ],
+        "price": 89.99
+      }
+    ],
+    "rating": 95,
+    "total_reviews": 7771,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i5-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1060."
+      },
+      {
+        "name": "Storage",
+        "value": "75 GB storage."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "GhostRidder",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "Evita la extinción de la raza humana en este juego de acción-aventura postapocalíptico: Stellar Blade™. Disfruta de combates feroces y una historia intrigante mientras resuelves los misterios que llevaron a la caída de la Tierra.",
+    "about": "Solo una espada puede definir el futuro de la humanidad. La Tierra ha quedado abandonada, devastada por criaturas poderosas y extrañas, y lo que queda de la diezmada raza humana ha huido a una colonia en el espacio exterior. Desde la Colonia, EVE llega a nuestro desolado planeta con una misión: salvar a la humanidad y recuperar la Tierra de las garras de los Naytibas, la fuerza malévola que ha arrasado con todo. Sin embargo, a medida que EVE se adentra en las ruinas de la civilización humana para resolver los misterios del pasado y derrota a los Naytibas uno por uno, comprende que su misión no es tan simple como pensaba. De hecho, es posible que nada sea lo que parece…",
+    "price": 69.99
+  },
+  {
+    "id": 2,
     "name": "The Alters",
     "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.everyeye.it%2Fimg-cover%2Fthe-alters-v5-49666-340.webp&f=1&nofb=1&ipt=851608886a379b966be9dc53567e655f42f00c9fd931c1255690cd444112fe06",
     "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1601570/header.jpg?t=1750167561",

@@ -15,10 +15,10 @@ export function calculatePrice(price: number, discount: number): number {
 }
 
 export function calculateGameRating(rating: number): string {
-  if (rating >= 50) return "Mixed"
-  if (rating >= 65) return "Mostly Positive"
-  if (rating >= 80) return "Very Positive"
   if (rating >= 90) return "Overwhelming Positive"
+  if (rating >= 80) return "Very Positive"
+  if (rating >= 65) return "Mostly Positive"
+  if (rating >= 50) return "Mixed"
   return "Negative"
 }
 
