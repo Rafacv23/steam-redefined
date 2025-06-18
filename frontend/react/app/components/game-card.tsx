@@ -136,7 +136,7 @@ export function DetailedGameCard({ game }: { game: Game }) {
               <Heart size={16} />
             </Button>
           </div>
-          <div className="mt-2 rounded-lg p-2">
+          <div className="mt-2 rounded-lg">
             <h3 className="text-2xl font-bold">{game.name}</h3>
             <p className="text-lg text-foreground-secondary">
               {game.developer}

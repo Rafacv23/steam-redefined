@@ -1,7 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowDownToLine, Heart, Search, ShoppingCart, X } from "lucide-react"
+import {
+  ArrowDownToLine,
+  ArrowUpRight,
+  Copy,
+  Heart,
+  Search,
+  ShoppingCart,
+  X,
+} from "lucide-react"
 import Button, { buttonVariants } from "@/components/ui/button"
 import {
   Dialog,
@@ -13,6 +21,7 @@ import {
 import { useRouter } from "next/navigation"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import { copyToClipboard, deleteRecentSearch } from "../../lib/utils"
 
 const usefullLinks = [
   {
@@ -141,14 +150,32 @@ export default function Header() {
                       {recentSearchs.map((search, index) => (
                         <li
                           key={index}
-                          className="text-secondary bg-header p-2 rounded-lg"
+                          className="text-secondary flex items-center justify-between bg-header p-2 rounded-lg"
                         >
-                          <Link
-                            href={`/search/${search}`}
-                            title={`Search for ${search}`}
-                          >
-                            {search}
-                          </Link>
+                          {search}
+                          <nav className="flex items-center gap-2">
+                            <Link
+                              href={`/search/${search}`}
+                              title={`Search for ${search}`}
+                              className={buttonVariants({ variant: "outline" })}
+                            >
+                              <ArrowUpRight size={18} />
+                            </Link>
+                            <Button
+                              variant={"outline"}
+                              onClick={() => copyToClipboard(search)}
+                            >
+                              <Copy size={18} />
+                              <span className="sr-only">Copy</span>
+                            </Button>
+                            <Button
+                              variant={"outline"}
+                              onClick={() => deleteRecentSearch(search)}
+                            >
+                              <X size={18} />
+                              <span className="sr-only">Remove</span>
+                            </Button>
+                          </nav>
                         </li>
                       ))}
                     </ul>

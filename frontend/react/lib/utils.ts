@@ -20,3 +20,18 @@ export function calculateGameRating(rating: number): string {
   if (rating >= 90) return "Overwhelming Positive"
   return "Negative"
 }
+
+export function deleteRecentSearch(query: string) {
+  const stored = localStorage.getItem("recentSearchs")
+  if (stored) {
+    const recentSearchs = JSON.parse(stored)
+    const updatedSearches = recentSearchs.filter((q: string) => q !== query)
+    localStorage.setItem("recentSearchs", JSON.stringify(updatedSearches))
+  }
+}
+
+export function copyToClipboard(text: string) {
+  const start = window.location.origin
+  const destination = `${start}/search/${text}`
+  navigator.clipboard.writeText(destination)
+}
