@@ -26,6 +26,10 @@ importers:
         version: 9.1.2
 
   backend:
+    dependencies:
+      playwright:
+        specifier: ^1.53.0
+        version: 1.53.0
     devDependencies:
       '@playwright/test':
         specifier: ^1.53.0

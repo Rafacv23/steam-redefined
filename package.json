@@ -29,7 +29,8 @@
     "dev:backend": "pnpm backend:dev",
     "dev:react": "pnpm react:dev",
     "dev:angular": "pnpm angular:dev",
-    "dev:vue": "pnpm vue:dev"
+    "dev:vue": "pnpm vue:dev",
+    "scrap:top-sellers": "cd backend && ts-node src/scrap/top-sellers.ts"
   },
   "keywords": [],
   "author": "",
