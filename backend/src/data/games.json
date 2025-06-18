@@ -180,29 +180,64 @@
     "price": 69.99
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "The Alters",
     "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.everyeye.it%2Fimg-cover%2Fthe-alters-v5-49666-340.webp&f=1&nofb=1&ipt=851608886a379b966be9dc53567e655f42f00c9fd931c1255690cd444112fe06",
     "poster": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1601570/header.jpg?t=1750167561",
     "trailer": "965Km7t6KwM",
-    "discount": 30,
+    "discount": 10,
     "developer": "11 bit studios",
     "publisher": "11 bit studios",
     "important": true,
-    "released": "2022-02-25",
-    "tags": ["Open World", "Souls-like", "Fantasy"],
-    "features": ["Single-player", "Controller Support", "Steam Achievements"],
-    "languages": ["English", "Japanese", "French", "German"],
-    "dlcs": ["Shadow of the Erdtree"],
-    "rating": 9.7,
-    "total_reviews": 250000,
-    "steam_deck": "Verified",
+    "released": "2025-06-13",
+    "tags": [
+      "Survival",
+      "Base building",
+      "Manage",
+      "Exploration",
+      "Action adventure",
+      "Strategy",
+      "Science-fiction",
+      "3D"
+    ],
+    "features": [
+      "Single-player",
+      "Controller Support",
+      "Steam Achievements",
+      "Steam Cloud"
+    ],
+    "languages": ["English", "Japanese", "French", "German", "Spanish"],
+    "dlcs": [
+      {
+        "name": "The Alters: Deluxe Edition",
+        "price": 47.83,
+        "content": ["The Alters", "The Alters Original Soundtrack"]
+      }
+    ],
+    "rating": 88,
+    "total_reviews": 2875,
+    "steam_deck": "Playable",
     "system_requiremens": [
-      "Windows 10",
-      "Intel i7-8700K",
-      "16 GB RAM",
-      "NVIDIA GTX 1070",
-      "60 GB storage"
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "Intel i7-8700K or higher."
+      },
+      {
+        "name": "RAM",
+        "value": "16 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 1060."
+      },
+      {
+        "name": "Storage",
+        "value": "50 GB storage."
+      }
     ],
     "reviews": [
       {
@@ -230,8 +265,91 @@
         "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
       }
     ],
-    "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring.",
-    "about": "Elden Ring is a fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R.R. Martin.",
-    "price": 59.99
+    "description": "Explora un emotivo juego de ciencia ficción que supone una mezcla única de aventura, supervivencia y construcción de bases. Juega como Jan Dolski, un trabajador normal que crea otras versiones de sí mismo para huir de un planeta en el que hasta los rayos del sol son letales.",
+    "about": "The Alters es un ambicioso juego de supervivencia y ciencia ficción con un giro único. Te pones en la piel de Jan Dolski, el único superviviente de una expedición fallida en un planeta hostil. Para sobrevivir, deberás formar una tripulación nueva para tu base móvil. Con una sustancia llamada rapidium, tendrás que crear versiones alternativas de Jan, los alters, cada una caracterizada por una decisión crucial diferente que tuvo que tomar el protagonista en el pasado",
+    "price": 34.99
+  },
+  {
+    "id": 4,
+    "name": "Timberborn",
+    "cover": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.cloudflare.steamstatic.com%2Fsteam%2Fapps%2F1062090%2Flibrary_600x900_2x.jpg%3Ft%3D1671100137&f=1&nofb=1&ipt=0795faf36f604da2f8c75b7a3019e2ec255e372c02f15eaa25b9f3d6229486b7",
+    "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062090/4bc77318229981d441aa33fad4959c684116f599/header.jpg?t=1748943231",
+    "trailer": "lx01nK_r-6c",
+    "discount": 30,
+    "developer": "Mechanistry",
+    "publisher": "Mechanistry",
+    "important": false,
+    "released": "2021-09-15",
+    "tags": [
+      "Base building",
+      "Colony sim",
+      "Voxel",
+      "Nature",
+      "Sandbox",
+      "Construction",
+      "Automation"
+    ],
+    "features": ["Single-player", "Steam Workshop", "Steam Cloud"],
+    "languages": ["English", "Japanese", "French", "German", "Spanish"],
+    "dlcs": [
+      {
+        "name": "Timberborn Soundtrack",
+        "price": 6.89
+      }
+    ],
+    "rating": 96,
+    "total_reviews": 29728,
+    "steam_deck": "Playable",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10 64-bit or higher."
+      },
+      {
+        "name": "CPU",
+        "value": "4-core 1.7 GHz or better"
+      },
+      {
+        "name": "RAM",
+        "value": "4 GB RAM."
+      },
+      {
+        "name": "GPU",
+        "value": "NVIDIA GTX 950."
+      },
+      {
+        "name": "Storage",
+        "value": "3 GB storage."
+      }
+    ],
+    "reviews": [
+      {
+        "author": "Knightmare",
+        "date": "2022-03-01",
+        "rating": 10,
+        "hours": 120,
+        "comment": "Masterpiece. GOTY easily."
+      },
+      {
+        "author": "BladeDancer",
+        "date": "2022-04-15",
+        "rating": 9,
+        "hours": 80,
+        "comment": "Amazing combat and world design."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1245620/Elden_Ring/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring"
+      }
+    ],
+    "description": "La humanidad se ha extinguido. En un mundo azotado por las sequías y los residuos tóxicos, ¿les pasará lo mismo a tus castores leñapunk? Disfruta de un juego de construcción con animales inteligentes, arquitectura vertical, física de líquidos y terraformación. ¡Contiene altas dosis de madera!",
+    "about": "La humanidad dejó la Tierra hecha un páramo y se extinguió, pero otras especies sobrevivieron y evolucionaron. ¡Escoge una de las facciones de castores y comprueba hasta dónde puede llegar tu colonia! Controla una de las dos facciones de castores: los Bucólicos, que adoran la naturaleza, o los industriales Dienteférreos. Cada facción tiene su estilo, sus edificios y sus habilidades especiales. ¡Elige la que mejor se adapte a tu estilo de juego! Prepara tu asentamiento para las sequías cíclicas y las oleadas de residuos tóxicos. Guarda comida y mantén los bosques y los cultivos con vida aunque los ríos se hayan secado. Usa las fuentes de agua naturales y el riego artificial para que la tierra siga siendo cultivable y tus castores estén sanos y salvos.",
+    "price": 33.99
   }
 ]
