@@ -1,4 +1,5 @@
 import { chromium } from 'playwright'
+import { acceptCookiesIfPresent, scrapeGameDetails } from './utils'
 ;(async () => {
   const browser = await chromium.launch({ headless: false })
   const context = await browser.newContext({
@@ -8,32 +9,30 @@ import { chromium } from 'playwright'
   })
 
   const page = await context.newPage()
-  const url = 'https://store.steampowered.com/agecheck/app/381210/'
-  await page.goto(url, { waitUntil: 'domcontentloaded' })
+  await page.goto('https://store.steampowered.com/charts/topselling?cc=us', {
+    waitUntil: 'domcontentloaded',
+  })
 
-  // Step 1: Accept Cookies
-  const acceptButton = await page.$('#acceptAllButton')
-  if (acceptButton) {
-    await acceptButton.click()
-    console.log('✅ Cookies accepted')
-    await page.waitForTimeout(1000)
-  }
+  await acceptCookiesIfPresent(page)
 
-  // Step 2: Age Check Handling
-  if (page.url().includes('/agecheck/')) {
-    console.log('🔞 Age check detected, submitting birthdate...')
-    await page.selectOption('#ageYear', '1990')
-    await page.click('#view_product_page_btn')
-    await page.waitForLoadState('domcontentloaded')
-    await page.waitForTimeout(1000)
-  }
-
-  // Step 3: Grab game title from final page
-  await page.waitForSelector('.apphub_AppName', { timeout: 10000 })
-  const title = await page.$eval('.apphub_AppName', (el) =>
-    el.textContent?.trim(),
+  await page.waitForSelector('tbody tr a._2C5PJOUH6RqyuBNEwaCE9X')
+  const gameLinks = await page.$$eval(
+    'tbody tr a._2C5PJOUH6RqyuBNEwaCE9X',
+    (anchors) => anchors.slice(0, 10).map((a) => (a as HTMLAnchorElement).href),
   )
-  console.log('🎮 Game title:', title)
+
+  const results = []
+  for (const gameUrl of gameLinks) {
+    console.log(`\n🔗 Visiting ${gameUrl}`)
+    const gamePage = await context.newPage()
+    const data = await scrapeGameDetails(gamePage, gameUrl)
+    console.log('🎮', data)
+    results.push(data)
+    await gamePage.close()
+  }
 
   await browser.close()
+
+  console.log('\n📦 Scraped Games:')
+  console.log(JSON.stringify(results, null, 2))
 })()
