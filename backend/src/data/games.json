@@ -351,5 +351,367 @@
     "description": "La humanidad se ha extinguido. En un mundo azotado por las sequías y los residuos tóxicos, ¿les pasará lo mismo a tus castores leñapunk? Disfruta de un juego de construcción con animales inteligentes, arquitectura vertical, física de líquidos y terraformación. ¡Contiene altas dosis de madera!",
     "about": "La humanidad dejó la Tierra hecha un páramo y se extinguió, pero otras especies sobrevivieron y evolucionaron. ¡Escoge una de las facciones de castores y comprueba hasta dónde puede llegar tu colonia! Controla una de las dos facciones de castores: los Bucólicos, que adoran la naturaleza, o los industriales Dienteférreos. Cada facción tiene su estilo, sus edificios y sus habilidades especiales. ¡Elige la que mejor se adapte a tu estilo de juego! Prepara tu asentamiento para las sequías cíclicas y las oleadas de residuos tóxicos. Guarda comida y mantén los bosques y los cultivos con vida aunque los ríos se hayan secado. Usa las fuentes de agua naturales y el riego artificial para que la tierra siga siendo cultivable y tus castores estén sanos y salvos.",
     "price": 33.99
+  },
+  {
+    "id": 5,
+    "name": "Hades",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256783611/movie_max.mp4",
+    "discount": 20,
+    "developer": "Supergiant Games",
+    "publisher": "Supergiant Games",
+    "important": true,
+    "released": "2020-09-17",
+    "tags": ["Roguelike", "Action", "Indie", "Isometric", "Dungeon Crawler"],
+    "features": [
+      "Single-player",
+      "Controller support",
+      "Steam Achievements",
+      "Cloud Saves"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Simplified Chinese",
+      "Japanese"
+    ],
+    "dlcs": [],
+    "rating": 97,
+    "total_reviews": 200000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      { "name": "OS", "value": "Windows 7 SP1" },
+      { "name": "Processor", "value": "Dual Core 2.4 GHz" },
+      { "name": "Memory", "value": "4 GB RAM" },
+      { "name": "Graphics", "value": "1GB VRAM / DirectX 10+ support" },
+      { "name": "Storage", "value": "15 GB available space" }
+    ],
+    "reviews": [
+      {
+        "author": "PlayerOne",
+        "date": "2021-06-10",
+        "rating": 10,
+        "hours": 120,
+        "comment": "One of the best roguelikes I've ever played. Amazing story and gameplay."
+      },
+      {
+        "author": "ZagreusMain",
+        "date": "2022-01-25",
+        "rating": 9,
+        "hours": 85,
+        "comment": "Addictive loop, brilliant art and music."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1145360/Hades/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.supergiantgames.com/games/hades/"
+      }
+    ],
+    "description": "Hades is a god-like rogue-like dungeon crawler that combines the best aspects of Supergiant's critically acclaimed titles.",
+    "about": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler.",
+    "price": 24.99
+  },
+  {
+    "id": 6,
+    "name": "Hollow Knight",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/367520/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256682566/movie_max.mp4",
+    "discount": 50,
+    "developer": "Team Cherry",
+    "publisher": "Team Cherry",
+    "important": true,
+    "released": "2017-02-24",
+    "tags": ["Metroidvania", "Souls-like", "Platformer", "2D"],
+    "features": [
+      "Single-player",
+      "Full controller support",
+      "Steam Achievements"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "German",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "dlcs": [],
+    "rating": 95,
+    "total_reviews": 300000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 7"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core 2 Duo E5200"
+      },
+      {
+        "name": "Memory",
+        "value": "4 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "GeForce 9800GTX+ (1GB)"
+      },
+      {
+        "name": "Storage",
+        "value": "9 GB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "KnightOfHallownest",
+        "date": "2020-10-01",
+        "rating": 10,
+        "hours": 150,
+        "comment": "A masterpiece of world-building and tight platforming."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/367520/Hollow_Knight/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.hollowknight.com/"
+      }
+    ],
+    "description": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes.",
+    "about": "Explore twisting caverns, battle tainted creatures, and escape intricate traps in a beautifully hand-drawn world.",
+    "price": 14.99
+  },
+  {
+    "id": 7,
+    "name": "Celeste",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/504230/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256701302/movie_max.mp4",
+    "discount": 75,
+    "developer": "Maddy Makes Games",
+    "publisher": "Maddy Makes Games",
+    "important": false,
+    "released": "2018-01-25",
+    "tags": ["Platformer", "Indie", "Pixel Graphics", "Story Rich"],
+    "features": [
+      "Single-player",
+      "Full controller support",
+      "Steam Achievements"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Japanese",
+      "Portuguese"
+    ],
+    "dlcs": [],
+    "rating": 96,
+    "total_reviews": 85000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 7"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core i3 M380"
+      },
+      {
+        "name": "Memory",
+        "value": "2 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "Intel HD 4000"
+      },
+      {
+        "name": "Storage",
+        "value": "1.2 GB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "JumpMaster",
+        "date": "2019-03-05",
+        "rating": 10,
+        "hours": 40,
+        "comment": "Brilliant and emotional, with pixel-perfect controls."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/504230/Celeste/"
+      }
+    ],
+    "description": "Help Madeline survive her journey to the top of Celeste Mountain in this super-tight platformer.",
+    "about": "A game about climbing a mountain and overcoming personal challenges. Heartfelt and difficult in the best way.",
+    "price": 19.99
+  },
+  {
+    "id": 8,
+    "name": "Stardew Valley",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256671271/movie_max.mp4",
+    "discount": 10,
+    "developer": "ConcernedApe",
+    "publisher": "ConcernedApe",
+    "important": true,
+    "released": "2016-02-26",
+    "tags": ["Farming Sim", "RPG", "Pixel Graphics", "Relaxing", "Indie"],
+    "features": [
+      "Single-player",
+      "Multiplayer",
+      "Co-op",
+      "Steam Cloud",
+      "Controller support"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German",
+      "Japanese",
+      "Chinese"
+    ],
+    "dlcs": [],
+    "rating": 98,
+    "total_reviews": 500000,
+    "steam_deck": "Verified",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows Vista or greater"
+      },
+      {
+        "name": "Processor",
+        "value": "2 GHz"
+      },
+      {
+        "name": "Memory",
+        "value": "2 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "256 MB video memory, shader model 3.0+"
+      },
+      {
+        "name": "Storage",
+        "value": "500 MB available space"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "FarmerJoe",
+        "date": "2019-06-30",
+        "rating": 10,
+        "hours": 300,
+        "comment": "Relaxing and addictive. Best farming sim ever."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.stardewvalley.net/"
+      }
+    ],
+    "description": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life.",
+    "about": "Turn your overgrown fields into a thriving farm. Learn to live off the land and create a second home in the Valley.",
+    "price": 13.49
+  },
+  {
+    "id": 9,
+    "name": "Cyberpunk 2077",
+    "cover": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg",
+    "poster": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
+    "trailer": "https://cdn.cloudflare.steamstatic.com/steam/apps/256810257/movie_max.mp4",
+    "discount": 50,
+    "developer": "CD PROJEKT RED",
+    "publisher": "CD PROJEKT RED",
+    "important": true,
+    "released": "2020-12-10",
+    "tags": ["Open World", "RPG", "Futuristic", "Story Rich"],
+    "features": ["Single-player", "Achievements", "Controller support"],
+    "languages": [
+      "English",
+      "Polish",
+      "French",
+      "German",
+      "Japanese",
+      "Spanish"
+    ],
+    "dlcs": [
+      {
+        "name": "Phantom Liberty",
+        "price": 29.99
+      }
+    ],
+    "rating": 80,
+    "total_reviews": 550000,
+    "steam_deck": "Playable",
+    "system_requiremens": [
+      {
+        "name": "OS",
+        "value": "Windows 10"
+      },
+      {
+        "name": "Processor",
+        "value": "Intel Core i5-3570K or AMD FX-8310"
+      },
+      {
+        "name": "Memory",
+        "value": "8 GB RAM"
+      },
+      {
+        "name": "Graphics",
+        "value": "GTX 780 or Radeon RX 470"
+      },
+      {
+        "name": "Storage",
+        "value": "70 GB SSD"
+      }
+    ],
+    "reviews": [
+      {
+        "author": "NightCityRunner",
+        "date": "2021-03-15",
+        "rating": 8,
+        "hours": 90,
+        "comment": "Rough launch, but incredible world-building and storytelling."
+      }
+    ],
+    "links": [
+      {
+        "name": "Steam",
+        "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
+      },
+      {
+        "name": "Official Site",
+        "url": "https://www.cyberpunk.net/"
+      }
+    ],
+    "description": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+    "about": "Play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
+    "price": 29.99
   }
 ]
