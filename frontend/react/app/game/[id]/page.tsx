@@ -6,6 +6,7 @@ import { Heart, ShoppingCart, User } from "lucide-react"
 import { Metadata } from "next"
 import { calculateGameRating, calculatePrice } from "../../../lib/utils"
 import Link from "next/link"
+import { WhislistBtn } from "@/components/client-btns"
 
 export async function generateMetadata({
   params,
@@ -41,9 +42,14 @@ export default async function GamePage({
       <div className="max-w-5xl mx-auto">
         <header className="flex justify-between w-full items-center mb-8">
           <h1 className="text-4xl font-bold">{game.name}</h1>
-          <Button>
-            Whislist <Heart size={16} />
-          </Button>
+          <WhislistBtn
+            aria-label="Add to whislist"
+            game={game}
+            variant="default"
+          >
+            Whislist
+            <Heart size={16} />
+          </WhislistBtn>
         </header>
         <main className="grid grid-cols-5 gap-8 mb-8">
           <section className="col-span-3">

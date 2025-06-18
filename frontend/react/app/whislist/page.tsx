@@ -1,4 +1,4 @@
-import { DetailedGameCard } from "@/components/game-card"
+import { DetailedGameCard, Game } from "@/components/game-card"
 
 const sortOptions = [
   { value: "name", label: "Name" },
@@ -94,6 +94,11 @@ const templateGames = [
 ]
 
 export default function WhislistPage() {
+  const whislistedGames = localStorage.getItem("whislist")
+  const whislistGames: Game[] = whislistedGames
+    ? JSON.parse(whislistedGames)
+    : []
+
   return (
     <div className="flex flex-col min-h-screen rounded-lg pb-20 sm:py-20 bg-gradient-to-b from-header to-primary/30">
       <main className="flex max-w-5xl flex-col w-full mx-auto items-center sm:items-start">
@@ -123,7 +128,7 @@ export default function WhislistPage() {
           </nav>
         </header>
         <ul className="flex flex-col gap-4 w-full">
-          {templateGames.map((game) => (
+          {whislistGames.map((game) => (
             <DetailedGameCard key={game.id} game={game} />
           ))}
         </ul>

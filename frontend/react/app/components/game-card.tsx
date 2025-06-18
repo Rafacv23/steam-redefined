@@ -2,6 +2,7 @@ import { Heart, ShoppingCart } from "lucide-react"
 import Link from "next/link"
 import Button from "./ui/button"
 import { calculateGameRating, calculatePrice } from "../../lib/utils"
+import { WhislistBtn } from "./client-btns"
 
 type Review = {
   author: string
@@ -75,9 +76,13 @@ export function GameCard({ game }: { game: Game }) {
             >
               {calculateGameRating(game.rating)}
             </span>
-            <Button size="default" variant="outline">
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
           <div className="mt-auto bg-background/50 rounded-lg p-2">
             <h3 className="text-2xl font-bold">{game.name}</h3>
@@ -132,9 +137,14 @@ export function DetailedGameCard({ game }: { game: Game }) {
                 {game.total_reviews} Reviews
               </span>
             </div>
-            <Button size="default" variant="outline">
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+              size="default"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
           <div className="mt-2 rounded-lg">
             <h3 className="text-2xl font-bold">{game.name}</h3>
@@ -189,9 +199,14 @@ export function BigGameCard({ game }: { game: Game }) {
             >
               {calculateGameRating(game.rating)}
             </span>
-            <Button size="default" variant="outline">
+            <WhislistBtn
+              aria-label="Add to whislist"
+              game={game}
+              variant="outline"
+              size="default"
+            >
               <Heart size={16} />
-            </Button>
+            </WhislistBtn>
           </div>
           <div className="mt-auto bg-background/50 rounded-lg p-2">
             <h3 className="text-2xl font-bold">{game.name}</h3>

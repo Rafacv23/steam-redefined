@@ -1,3 +1,4 @@
+import { Game } from "@/components/game-card"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -34,4 +35,15 @@ export function copyToClipboard(text: string) {
   const start = window.location.origin
   const destination = `${start}/search/${text}`
   navigator.clipboard.writeText(destination)
+}
+
+export function addGameToWhislist(game: Game) {
+  const whislist = localStorage.getItem("whislist")
+  if (whislist) {
+    const whislistGames = JSON.parse(whislist)
+    whislistGames.push(game)
+    localStorage.setItem("whislist", JSON.stringify(whislistGames))
+  } else {
+    localStorage.setItem("whislist", JSON.stringify([game]))
+  }
 }
